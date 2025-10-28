@@ -1,0 +1,195 @@
+{
+    "employees": [
+      {
+        "id": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+        "name": "Priya Patel",
+        "department": "Engineering",
+        "riskLevel": "high"
+      },
+      {
+        "id": "6ba7b810-9dad-11d1-80b4-00c04fd430c8",
+        "name": "João Silva",
+        "department": "Finance",
+        "riskLevel": "medium"
+      },
+      {
+        "id": "6ba7b811-9dad-11d1-80b4-00c04fd430c8",
+        "name": "Fatima Al-Rashid",
+        "department": "Marketing",
+        "riskLevel": "low"
+      },
+      {
+        "id": "6ba7b812-9dad-11d1-80b4-00c04fd430c8",
+        "name": "Oluwaseun Adeyemi",
+        "department": "Operations",
+        "riskLevel": "high"
+      },
+      {
+        "id": "6ba7b813-9dad-11d1-80b4-00c04fd430c8",
+        "name": "Chen Wei-Lin",
+        "department": "HR",
+        "riskLevel": "medium"
+      }
+    ],
+    "suggestions": [
+      {
+        "id": "550e8400-e29b-41d4-a716-446655440001",
+        "employeeId": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+        "type": "equipment",
+        "description": "Replace standard peripherals with ergonomic keyboard and mouse to reduce wrist strain",
+        "status": "pending",
+        "priority": "high",
+        "source": "vida",
+        "dateCreated": "2024-01-15T09:00:00Z",
+        "dateUpdated": "2024-01-15T09:00:00Z",
+        "notes": ""
+      },
+      {
+        "id": "550e8400-e29b-41d4-a716-446655440002",
+        "employeeId": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+        "type": "exercise",
+        "description": "Daily 10-minute wrist and forearm strengthening routine",
+        "status": "in_progress",
+        "priority": "high",
+        "source": "vida",
+        "dateCreated": "2024-01-15T09:00:00Z",
+        "dateUpdated": "2024-01-18T14:30:00Z",
+        "notes": "Employee reports improvement in wrist comfort"
+      },
+      {
+        "id": "550e8400-e29b-41d4-a716-446655440003",
+        "employeeId": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+        "type": "behavioural",
+        "description": "Take 2-minute break every 30 minutes to stretch and rest eyes",
+        "status": "completed",
+        "priority": "medium",
+        "source": "vida",
+        "dateCreated": "2024-01-10T11:00:00Z",
+        "dateUpdated": "2024-01-20T16:00:00Z",
+        "dateCompleted": "2024-01-20T16:00:00Z",
+        "notes": "Using Pomodoro timer app successfully"
+      },
+      {
+        "id": "550e8400-e29b-41d4-a716-446655440004",
+        "employeeId": "6ba7b810-9dad-11d1-80b4-00c04fd430c8",
+        "type": "equipment",
+        "description": "Install adjustable monitor arm to achieve proper eye level (top of screen at eye height)",
+        "status": "in_progress",
+        "priority": "medium",
+        "source": "vida",
+        "dateCreated": "2024-01-16T10:30:00Z",
+        "dateUpdated": "2024-01-19T09:15:00Z",
+        "notes": "Order placed, awaiting delivery"
+      },
+      {
+        "id": "550e8400-e29b-41d4-a716-446655440005",
+        "employeeId": "6ba7b810-9dad-11d1-80b4-00c04fd430c8",
+        "type": "lifestyle",
+        "description": "Use supportive pillow and maintain neutral spine position during sleep",
+        "status": "pending",
+        "priority": "low",
+        "source": "vida",
+        "dateCreated": "2024-01-17T08:00:00Z",
+        "dateUpdated": "2024-01-17T08:00:00Z",
+        "notes": ""
+      },
+      {
+        "id": "550e8400-e29b-41d4-a716-446655440006",
+        "employeeId": "6ba7b811-9dad-11d1-80b4-00c04fd430c8",
+        "type": "exercise",
+        "description": "Specific core exercises 3x per week as demonstrated in VIDA app",
+        "status": "in_progress",
+        "priority": "medium",
+        "source": "vida",
+        "dateCreated": "2024-01-14T13:00:00Z",
+        "dateUpdated": "2024-01-21T10:00:00Z",
+        "notes": "Finding morning sessions work best"
+      },
+      {
+        "id": "550e8400-e29b-41d4-a716-446655440007",
+        "employeeId": "6ba7b811-9dad-11d1-80b4-00c04fd430c8",
+        "type": "behavioural",
+        "description": "Set hourly reminders to check and correct sitting posture",
+        "status": "pending",
+        "priority": "low",
+        "source": "vida",
+        "dateCreated": "2024-01-20T15:30:00Z",
+        "dateUpdated": "2024-01-20T15:30:00Z",
+        "notes": "Suggested after workplace assessment"
+      },
+      {
+        "id": "550e8400-e29b-41d4-a716-446655440008",
+        "employeeId": "6ba7b812-9dad-11d1-80b4-00c04fd430c8",
+        "type": "equipment",
+        "description": "Provide sit-stand desk converter to alternate positions throughout the day",
+        "status": "pending",
+        "priority": "high",
+        "source": "vida",
+        "dateCreated": "2024-01-12T09:00:00Z",
+        "dateUpdated": "2024-01-12T09:00:00Z",
+        "notes": ""
+      },
+      {
+        "id": "550e8400-e29b-41d4-a716-446655440009",
+        "employeeId": "6ba7b812-9dad-11d1-80b4-00c04fd430c8",
+        "type": "equipment",
+        "description": "Ergonomic lumbar support for existing office chair",
+        "status": "completed",
+        "priority": "high",
+        "source": "admin",
+        "createdBy": "hsmanager@company.com",
+        "dateCreated": "2024-01-08T10:00:00Z",
+        "dateUpdated": "2024-01-15T14:00:00Z",
+        "dateCompleted": "2024-01-15T14:00:00Z",
+        "notes": "Employee reports significant improvement"
+      },
+      {
+        "id": "550e8400-e29b-41d4-a716-446655440010",
+        "employeeId": "6ba7b812-9dad-11d1-80b4-00c04fd430c8",
+        "type": "lifestyle",
+        "description": "Aim for 2L of water daily to maintain disc hydration and reduce back stiffness",
+        "status": "in_progress",
+        "priority": "medium",
+        "source": "vida",
+        "dateCreated": "2024-01-13T11:00:00Z",
+        "dateUpdated": "2024-01-20T09:00:00Z",
+        "notes": "Using water tracking app"
+      },
+      {
+        "id": "550e8400-e29b-41d4-a716-446655440013",
+        "employeeId": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+        "type": "lifestyle",
+        "description": "Limit to 2 cups of coffee daily to reduce muscle tension",
+        "status": "pending",
+        "priority": "low",
+        "source": "vida",
+        "dateCreated": "2024-01-20T08:00:00Z",
+        "dateUpdated": "2024-01-20T08:00:00Z",
+        "notes": ""
+      },
+      {
+        "id": "550e8400-e29b-41d4-a716-446655440014",
+        "employeeId": "6ba7b810-9dad-11d1-80b4-00c04fd430c8",
+        "type": "exercise",
+        "description": "20-20-20 rule: Every 20 minutes, look at something 20 feet away for 20 seconds",
+        "status": "in_progress",
+        "priority": "medium",
+        "source": "vida",
+        "dateCreated": "2024-01-18T10:00:00Z",
+        "dateUpdated": "2024-01-21T11:30:00Z",
+        "notes": "Reminder app installed"
+      },
+      {
+        "id": "550e8400-e29b-41d4-a716-446655440015",
+        "employeeId": "6ba7b811-9dad-11d1-80b4-00c04fd430c8",
+        "type": "equipment",
+        "description": "Adjustable document holder to reduce neck strain when referencing papers",
+        "status": "overdue",
+        "priority": "low",
+        "source": "vida",
+        "dateCreated": "2023-12-15T09:00:00Z",
+        "dateUpdated": "2023-12-15T09:00:00Z",
+        "notes": "Budget approval pending"
+      }
+    ]
+  }
