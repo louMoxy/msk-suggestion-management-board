@@ -1,36 +1,45 @@
-import React, { useEffect, useState } from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { Container, Box, ToggleButtonGroup, ToggleButton } from '@mui/material';
 import './App.css';
+import {EmployeesTable} from './Components/EmployeesTable';
+import {SuggestionsTable} from './Components/SuggestionsTable';
+
+type ViewType = 'employees' | 'suggestions';
 
 function App(): React.JSX.Element {
-  const [data, setData] = useState<any>(null);
+  const [view, setView] = useState<ViewType>('suggestions');
 
-  useEffect(() => {
-    fetch('http://localhost:3001/data')
-      .then(response => response.json())
-      .then(data => console.log(data))
-      .catch(error => console.error('Error:', error));
-  }, []);
-
-  console.log(data);
+  const handleViewChange = (
+    _event: React.MouseEvent<HTMLElement>,
+    newView: ViewType | null,
+  ) => {
+    if (newView !== null) {
+      setView(newView);
+    }
+  };
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <Container maxWidth="md">
+      <Box sx={{ mb: 3 }}>
+        <ToggleButtonGroup
+          value={view}
+          exclusive
+          onChange={handleViewChange}
+          aria-label="table view"
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <ToggleButton value="suggestions" aria-label="suggestions view">
+            Suggestions
+          </ToggleButton>
+          <ToggleButton value="employees" aria-label="employees view">
+            Employees
+          </ToggleButton>
+        </ToggleButtonGroup>
+      </Box>
+      <Box>
+        {view === 'employees' && <EmployeesTable />}
+        {view === 'suggestions' && <SuggestionsTable />}
+      </Box>
+    </Container>
   );
 }
 
