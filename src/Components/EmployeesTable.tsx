@@ -30,8 +30,7 @@ import {
   DialogContent,
   DialogActions,
   Snackbar,
-  Alert,
-  Typography
+  Alert
 } from '@mui/material';
 import EmployeeSidebar from './EmployeeSidebar';
 import { Chip, Stack } from '@mui/material';
@@ -47,6 +46,10 @@ import {
 } from '../utils/tableUtils';
 import type { Suggestion } from '../Types/suggestions';
 import ErrorHandler from './ErrorHandler';
+import { Tabs, Tab } from '@mui/material';
+import { AppView } from '../Types/appView';
+import LightbulbIcon from '@mui/icons-material/Lightbulb';
+import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 
 const getInitialSortBy = (): SortableColumn => {
   if (typeof window === 'undefined') return 'riskLevel';
@@ -74,7 +77,7 @@ const getInitialFilters = (): { name?: string; department?: string; riskLevel?: 
     };
 };
 
-export const EmployeesTable = () => {
+export const EmployeesTable = ({ appView = AppView.Employees, onChangeAppView }: { appView?: AppView; onChangeAppView?: (_e: React.SyntheticEvent, v: AppView | null) => void; }) => {
     const [sortBy, setSortBy] = useState<SortableColumn>(getInitialSortBy());
     const [sortOrder, setSortOrder] = useState<SortOrder>(getInitialSortOrder());
     const [page, setPage] = useState(0);
@@ -259,6 +262,12 @@ export const EmployeesTable = () => {
     <Box>
       <Card sx={{ mb: 3 }}>
         <CardContent sx={{padding: '0 !important'}}>
+          <Box sx={{ p: 2, borderBottom: 1, borderColor: 'divider', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <Tabs value={appView} onChange={onChangeAppView} sx={{ minHeight: 40 }}>
+              <Tab value="suggestions" icon={<LightbulbIcon />} iconPosition="start" label="Suggestions" />
+              <Tab value="employees" icon={<PeopleAltIcon />} iconPosition="start" label="Employees" />
+            </Tabs>
+          </Box>
           <TableContainer sx={{ maxHeight: '70vh' }}>
             <MuiTable stickyHeader>
               <TableHead>

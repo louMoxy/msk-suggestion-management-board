@@ -1,4 +1,4 @@
-import { Drawer, Avatar, Box, Typography, Divider, Button } from '@mui/material';
+import { Drawer, Avatar, Box, Typography, Divider, Button, Chip, Stack } from '@mui/material';
 import type { Employee } from '../Types/employee';
 import type { Suggestion } from '../Types/suggestions';
 import SuggestionCard from './SuggestionCard';
@@ -46,8 +46,10 @@ export default function EmployeeSidebar({ open, onClose, employee, suggestions, 
           <Divider />
           <Box>
             <Typography variant="subtitle2" sx={{ mb: 1 }}>Stats</Typography>
-            <Typography variant="body2">Risk: {getLevelDisplay(employee.riskLevel)}</Typography>
-            <Typography variant="body2">Suggestions: {suggestions.length}</Typography>
+            <Stack direction="row" spacing={1} alignItems="center" flexWrap="wrap" useFlexGap>
+              <Chip label={`Risk: ${getLevelDisplay(employee.riskLevel)}`} size="small" color="info" variant="outlined" />
+              <Chip label={`Suggestions: ${suggestions.length}`} size="small" color="primary" variant="outlined" />
+            </Stack>
           </Box>
           {onAddSuggestionForEmployee && (
             <>

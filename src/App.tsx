@@ -1,43 +1,13 @@
-import React, { useState } from 'react';
-import { Container, Box, ToggleButtonGroup, ToggleButton } from '@mui/material';
+import React from 'react';
+import { Container, Box } from '@mui/material';
 import './App.css';
-import {EmployeesTable} from './Components/EmployeesTable';
-import {SuggestionsTable} from './Components/SuggestionsTable';
-
-type ViewType = 'employees' | 'suggestions';
+import AppViewRouter from './Components/AppViewRouter';
 
 function App(): React.JSX.Element {
-  const [view, setView] = useState<ViewType>('suggestions');
-
-  const handleViewChange = (
-    _event: React.MouseEvent<HTMLElement>,
-    newView: ViewType | null,
-  ) => {
-    if (newView !== null) {
-      setView(newView);
-    }
-  };
-
   return (
-    <Container maxWidth="md">
-      <Box sx={{ mb: 3 }}>
-        <ToggleButtonGroup
-          value={view}
-          exclusive
-          onChange={handleViewChange}
-          aria-label="table view"
-        >
-          <ToggleButton value="suggestions" aria-label="suggestions view">
-            Suggestions
-          </ToggleButton>
-          <ToggleButton value="employees" aria-label="employees view">
-            Employees
-          </ToggleButton>
-        </ToggleButtonGroup>
-      </Box>
+    <Container maxWidth="xl">
       <Box>
-        {view === 'employees' && <EmployeesTable />}
-        {view === 'suggestions' && <SuggestionsTable />}
+        <AppViewRouter />
       </Box>
     </Container>
   );

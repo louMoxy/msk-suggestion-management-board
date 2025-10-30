@@ -13,14 +13,6 @@ interface SuggestionsKanbanProps {
 
 export default function SuggestionsKanban({ statusOrder, statusLabels, groupedByStatus, onMoveSuggestion, onEditSuggestion }: SuggestionsKanbanProps) {
   const [dragOverStatus, setDragOverStatus] = useState<SuggestionStatus | null>(null);
-  const [expandedIds, setExpandedIds] = useState<Set<string>>(new Set());
-  const toggleExpand = (id: string) => {
-    setExpandedIds(prev => {
-      const next = new Set(prev);
-      if (next.has(id)) next.delete(id); else next.add(id);
-      return next;
-    });
-  };
 
   const handleCardDragStart = (suggestionId: string) => (e: React.DragEvent) => {
     e.dataTransfer.setData('text/plain', suggestionId);
@@ -52,9 +44,7 @@ export default function SuggestionsKanban({ statusOrder, statusLabels, groupedBy
       variant="kanban"
       draggable
       onDragStart={(e) => handleCardDragStart(suggestion.id)(e)}
-      expandable
-      expanded={expandedIds.has(suggestion.id)}
-      onToggleExpand={() => toggleExpand(suggestion.id)}
+      expandable={false}
       showEdit={Boolean(onEditSuggestion)}
       onEdit={onEditSuggestion}
     />
@@ -68,7 +58,7 @@ export default function SuggestionsKanban({ statusOrder, statusLabels, groupedBy
       <Box
         key={status}
         sx={{
-          minWidth: 300,
+          minWidth: 340,
           flex: 1,
           display: 'flex',
           flexDirection: 'column',
@@ -77,16 +67,35 @@ export default function SuggestionsKanban({ statusOrder, statusLabels, groupedBy
           border: dragOverStatus === status ? 2 : 1,
           borderColor: dragOverStatus === status ? 'primary.main' : 'divider',
           borderRadius: 1,
-          transition: 'border-color 120ms ease'
+          transition: 'border-color 120ms ease',
+          backgroundColor: 'rgba(90,119,223,0.06)'
         }}
         onDragOver={handleColumnDragOver(status)}
         onDragLeave={handleColumnDragLeave(status)}
         onDrop={handleColumnDrop(status)}
       >
-        <Typography variant="h6" sx={{ mb: 2, fontWeight: 'bold' }}>
-          {statusLabels[status]} ({suggestions.length})
-        </Typography>
-        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
+        <Box
+          sx={{
+            position: 'sticky',
+            top: 0,
+            zIndex: 1,
+            px: 1.5,
+            py: 1,
+            mb: 1.5,
+            backgroundColor: 'rgba(240,243,250,0.9)',
+            backdropFilter: 'blur(2px)',
+            borderBottom: 1,
+            borderColor: 'divider',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+          }}
+        >
+          <Typography variant="subtitle2" sx={{ fontWeight: 700 }}>
+            {statusLabels[status]} ({suggestions.length})
+          </Typography>
+        </Box>
+        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1, px: 1 }}>
           {isEmpty ? (
             <Paper sx={{ p: 2, textAlign: 'center', color: 'text.secondary' }}>
               No suggestions

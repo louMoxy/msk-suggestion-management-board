@@ -40,6 +40,7 @@ import {
   ListItemText
 } from '@mui/material';
 import { Chip, Stack } from '@mui/material';
+import { Tabs, Tab } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit';
 import SaveIcon from '@mui/icons-material/Save';
 import DeleteIcon from '@mui/icons-material/Delete';
@@ -52,14 +53,20 @@ import AddIcon from '@mui/icons-material/Add';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import EmployeeSidebar from './EmployeeSidebar';
 import SuggestionsKanban from './SuggestionsKanban';
+import TableChartIcon from '@mui/icons-material/TableChart';
+import ViewKanbanIcon from '@mui/icons-material/ViewKanban';
+import LightbulbIcon from '@mui/icons-material/Lightbulb';
+import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import {
   SortOrder,
   SortableSuggestionColumn,
-  getLevelDisplay,
   formatDate,
   getAlternatingRowStyle
 } from '../utils/tableUtils';
+import { getStatusChipProps, getPriorityChipProps } from '../utils/tableUtils';
 import ErrorHandler from './ErrorHandler';
+import { AppView } from '../Types/appView';
+
 
 type ViewMode = 'table' | 'kanban';
 
@@ -124,7 +131,7 @@ function updateUrlParams(
   window.history.replaceState({}, '', newUrl);
 }
 
-export const SuggestionsTable = () => {
+export const SuggestionsTable = ({ appView, onChangeAppView }: { appView: AppView; onChangeAppView: (_e: React.SyntheticEvent, v: AppView | null) => void; }) => {
   const [viewMode, setViewMode] = useState<ViewMode>('table');
   const [sortBy, setSortBy] = useState<SortableSuggestionColumn>(getInitialSortBy());
   const [sortOrder, setSortOrder] = useState<SortOrder>(getInitialSortOrder());
@@ -572,6 +579,8 @@ export const SuggestionsTable = () => {
               size="small"
               fullWidth
               variant="standard"
+              multiline
+              minRows={3}
             />
           ) : (
             suggestion.description
@@ -610,7 +619,7 @@ export const SuggestionsTable = () => {
               <MenuItem value="overdue">overdue</MenuItem>
             </Select>
           ) : (
-            suggestion.status
+            <Chip size="small" {...getStatusChipProps(suggestion.status)} />
           )}
         </TableCell>
         <TableCell>
@@ -627,7 +636,7 @@ export const SuggestionsTable = () => {
               <MenuItem value="high">high</MenuItem>
             </Select>
           ) : (
-            getLevelDisplay(suggestion.priority)
+            <Chip size="small" {...getPriorityChipProps(suggestion.priority)} />
           )}
         </TableCell>
         <TableCell>
@@ -691,8 +700,20 @@ export const SuggestionsTable = () => {
   };
 
   const renderTableView = () => (
-    <TableContainer sx={{ maxHeight: '70vh' }}>
-      <MuiTable stickyHeader>
+    <>
+      <Box sx={{ px: 2, py: 1, display: 'flex', justifyContent: 'flex-end' }}>
+        <TablePagination
+          rowsPerPageOptions={ROWS_PER_PAGE_OPTIONS}
+          component="div"
+          count={pagination?.total ?? 0}
+          rowsPerPage={rowsPerPage}
+          page={page}
+          onPageChange={handleChangePage}
+          onRowsPerPageChange={handleChangeRowsPerPage}
+        />
+      </Box>
+      <TableContainer sx={{ maxHeight: '70vh' }}>
+        <MuiTable stickyHeader>
         <TableHead>
           <TableRow>
             <TableCell padding="checkbox">
@@ -727,44 +748,42 @@ export const SuggestionsTable = () => {
         <TableBody>
           {suggestionsData.map(renderTableRow)}
         </TableBody>
-        <TableFooter>
-          <TableRow>
-            <TablePagination
-              rowsPerPageOptions={ROWS_PER_PAGE_OPTIONS}
-              colSpan={9}
-              count={pagination?.total ?? 0}
-              rowsPerPage={rowsPerPage}
-              page={page}
-              onPageChange={handleChangePage}
-              onRowsPerPageChange={handleChangeRowsPerPage}
-            />
-          </TableRow>
-        </TableFooter>
-      </MuiTable>
-    </TableContainer>
+        </MuiTable>
+      </TableContainer>
+    </>
   );
 
   return (
     <Card>
-      <CardContent sx={{ padding: '0 !important' }}>
+      {/* Override the default padding of the CardContent */}
+      <CardContent sx={{ padding: '0 !important' }}> 
         <Box sx={{ p: 2, borderBottom: 1, borderColor: 'divider' }}>
-          <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 2 }}>
-            <ToggleButtonGroup
-              value={viewMode}
-              exclusive
-              onChange={handleViewModeChange}
-              aria-label="view mode"
-            >
-              <ToggleButton value="table" aria-label="table view">
-                Table
-              </ToggleButton>
-              <ToggleButton value="kanban" aria-label="kanban view">
-                Kanban
-              </ToggleButton>
-            </ToggleButtonGroup>
-            <Button variant="contained" size="small" startIcon={<AddIcon />} onClick={() => { setCreateMode('create'); setEditingId(null); setCreateOpen(true); }}>
-              Add suggestion
-            </Button>
+            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 2 }}>
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+              <Tabs value={appView} onChange={onChangeAppView} sx={{ minHeight: 40 }}>
+                <Tab value="suggestions" icon={<LightbulbIcon />} iconPosition="start" label="Suggestions" />
+                <Tab value="employees" icon={<PeopleAltIcon />} iconPosition="start" label="Employees" />
+              </Tabs>
+            </Box>
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+              <ToggleButtonGroup
+                value={viewMode}
+                exclusive
+                onChange={handleViewModeChange}
+                aria-label="view mode"
+                >
+                  <ToggleButton value="table" aria-label="table view">
+                    <TableChartIcon fontSize="small" />
+                  </ToggleButton>
+                  <ToggleButton value="kanban" aria-label="kanban view">
+                    <ViewKanbanIcon fontSize="small" />
+                  </ToggleButton>
+                </ToggleButtonGroup>
+              <Button variant="contained" size="large" startIcon={<AddIcon />} onClick={() => { setCreateMode('create'); setEditingId(null); setCreateOpen(true); }}>
+                Add suggestion
+              </Button>
+            </Box>
+
           </Box>
         </Box>
         {activeFilterChips.length > 0 && (

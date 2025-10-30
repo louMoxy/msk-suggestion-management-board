@@ -1,9 +1,9 @@
 import React from 'react';
-import { Box, Typography, IconButton, Card, CardContent, Tooltip } from '@mui/material';
+import { Box, Typography, IconButton, Card, CardContent, Tooltip, Chip, Stack } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import EditIcon from '@mui/icons-material/Edit';
-import { getLevelDisplay, formatDate } from '../utils/tableUtils';
+import { getLevelDisplay, formatDate, getPriorityChipProps } from '../utils/tableUtils';
 import type { Suggestion } from '../Types/suggestions';
 
 interface SuggestionCardProps {
@@ -35,7 +35,7 @@ export default function SuggestionCard({
         <Typography
           variant="body2"
           sx={{ fontWeight: 500 }}
-          noWrap={expandable ? !expanded : true}
+          noWrap={expandable ? !expanded : false}
           title={suggestion.description}
         >
           {suggestion.description}
@@ -48,7 +48,7 @@ export default function SuggestionCard({
               </IconButton>
             </Tooltip>
           )}
-          {expandable && (
+          {expandable && onToggleExpand && (
             <IconButton size="small" onClick={() => onToggleExpand?.(suggestion.id)} aria-label={expanded ? 'collapse description' : 'expand description'}>
               {expanded ? <ExpandLessIcon fontSize="small" /> : <ExpandMoreIcon fontSize="small" />}
             </IconButton>
@@ -57,18 +57,19 @@ export default function SuggestionCard({
       </Box>
       {expandable && expanded && (
         <Typography variant="body2" sx={{ whiteSpace: 'pre-wrap', mt: 0.5 }}>
-          {suggestion.type}
+          {suggestion.description}
         </Typography>
       )}
-      <Typography variant="caption" color="text.secondary">
-        {getLevelDisplay(suggestion.priority)} • {formatDate(suggestion.dateCreated)}
-      </Typography>
+      <Stack direction="row" spacing={1} alignItems="center" sx={{ mt: 0.5 }}>
+        <Chip size="small" {...getPriorityChipProps(suggestion.priority)} />
+        <Typography variant="caption" color="text.secondary">{formatDate(suggestion.dateCreated)}</Typography>
+      </Stack>
     </Box>
   );
 
   if (variant === 'kanban') {
     return (
-      <Card sx={{ mb: 1, cursor: draggable ? 'grab' : 'default' }} draggable={draggable} onDragStart={(e) => onDragStart?.(e, suggestion.id)}>
+      <Card sx={{ mb: 1, cursor: draggable ? 'grab' : 'default', bgcolor: '#fff', border: '1px solid', borderColor: 'divider' }} draggable={draggable} onDragStart={(e) => onDragStart?.(e, suggestion.id)}>
         <CardContent>
           {content}
         </CardContent>

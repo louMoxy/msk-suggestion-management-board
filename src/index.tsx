@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
+import theme from './theme';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -10,7 +11,6 @@ import reportWebVitals from './reportWebVitals';
 const rootElement = document.getElementById('root');
 if (!rootElement) throw new Error('Failed to find the root element');
 
-const theme = createTheme();
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
