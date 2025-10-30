@@ -9,10 +9,12 @@ interface SuggestionsKanbanProps {
   groupedByStatus: Record<SuggestionStatus, Suggestion[]>;
   onMoveSuggestion: (id: string, status: SuggestionStatus) => void;
   onEditSuggestion?: (suggestion: Suggestion) => void;
+  isMobile?: boolean;
 }
 
-export default function SuggestionsKanban({ statusOrder, statusLabels, groupedByStatus, onMoveSuggestion, onEditSuggestion }: SuggestionsKanbanProps) {
+export default function SuggestionsKanban({ statusOrder, statusLabels, groupedByStatus, onMoveSuggestion, onEditSuggestion, isMobile }: SuggestionsKanbanProps) {
   const [dragOverStatus, setDragOverStatus] = useState<SuggestionStatus | null>(null);
+  const [activeStatus, setActiveStatus] = useState<SuggestionStatus>(statusOrder[0]);
 
   const handleCardDragStart = (suggestionId: string) => (e: React.DragEvent) => {
     e.dataTransfer.setData('text/plain', suggestionId);
@@ -107,6 +109,38 @@ export default function SuggestionsKanban({ statusOrder, statusLabels, groupedBy
       </Box>
     );
   };
+
+  if (isMobile) {
+    return (
+      <Box sx={{ p: 2 }}>
+        <Box sx={{ mb: 1, display: 'flex', gap: 1, overflowX: 'auto' }}>
+          {statusOrder.map(s => (
+            <Box
+              key={s}
+              onClick={() => setActiveStatus(s)}
+              sx={{
+                px: 1.25,
+                py: 0.5,
+                borderRadius: 999,
+                border: '1px solid',
+                borderColor: activeStatus === s ? 'primary.main' : 'divider',
+                backgroundColor: activeStatus === s ? 'rgba(90,119,223,0.12)' : 'background.paper',
+                cursor: 'pointer',
+                whiteSpace: 'nowrap',
+                fontSize: 12,
+                fontWeight: 600,
+              }}
+            >
+              {statusLabels[s]}
+            </Box>
+          ))}
+        </Box>
+        <Box sx={{ display: 'flex' }}>
+          {renderKanbanColumn(activeStatus)}
+        </Box>
+      </Box>
+    );
+  }
 
   return (
     <Box sx={{ display: 'flex', gap: 2, overflowX: 'auto', p: 2 }}>

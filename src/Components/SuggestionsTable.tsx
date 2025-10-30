@@ -40,6 +40,9 @@ import {
   ListItemText
 } from '@mui/material';
 import { Chip, Stack } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { Card as MuiCard } from '@mui/material';
 import { Tabs, Tab } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit';
 import SaveIcon from '@mui/icons-material/Save';
@@ -132,6 +135,8 @@ function updateUrlParams(
 }
 
 export const SuggestionsTable = ({ appView, onChangeAppView }: { appView: AppView; onChangeAppView: (_e: React.SyntheticEvent, v: AppView | null) => void; }) => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const [viewMode, setViewMode] = useState<ViewMode>('table');
   const [sortBy, setSortBy] = useState<SortableSuggestionColumn>(getInitialSortBy());
   const [sortOrder, setSortOrder] = useState<SortOrder>(getInitialSortOrder());
@@ -521,6 +526,7 @@ export const SuggestionsTable = ({ appView, onChangeAppView }: { appView: AppVie
       statusLabels={STATUS_LABELS}
       groupedByStatus={groupedByStatus}
       onMoveSuggestion={handleMoveSuggestion}
+      isMobile={isMobile}
       onEditSuggestion={(suggestion) => {
         setCreateData({
           description: suggestion.description,
@@ -699,6 +705,61 @@ export const SuggestionsTable = ({ appView, onChangeAppView }: { appView: AppVie
     );
   };
 
+  const renderRowCard = (suggestion: Suggestion, index: number) => {
+    const isEditing = editingRowId === suggestion.id;
+    const displayData = isEditing && editingData ? editingData : suggestion;
+    return (
+      <MuiCard key={suggestion.id} sx={{ mb: 1, p: 1 }}>
+        <Box sx={{ display: 'flex', gap: 1, alignItems: 'flex-start' }}>
+          <Checkbox
+            checked={selectedRows.has(suggestion.id)}
+            onChange={() => handleSelectRow(suggestion.id)}
+            disabled={isEditing}
+            sx={{ mt: 0.5 }}
+          />
+          <Box sx={{ flex: 1 }}>
+            {isEditing ? (
+              <TextField
+                value={displayData.description || ''}
+                onChange={(e) => handleEditFieldChange('description', e.target.value)}
+                size="small"
+                fullWidth
+                variant="standard"
+                multiline
+                minRows={3}
+              />
+            ) : (
+              <Typography variant="body2" sx={{ fontWeight: 600 }}>{suggestion.description}</Typography>
+            )}
+            <Stack direction="row" spacing={1} alignItems="center" sx={{ mt: 0.75, flexWrap: 'wrap' }}>
+              <Typography variant="caption" color="text.secondary">{suggestion.type}</Typography>
+              <Chip size="small" {...getStatusChipProps(suggestion.status)} />
+              <Chip size="small" {...getPriorityChipProps(suggestion.priority)} />
+              <Typography variant="caption" color="text.secondary">{employeeMap[suggestion.employeeId]?.name || 'Unknown'}</Typography>
+              <Typography variant="caption" color="text.secondary">{formatDate(suggestion.dateCreated)}</Typography>
+            </Stack>
+          </Box>
+          <Box>
+            {isEditing ? (
+              <IconButton size="small" onClick={() => handleEdit(suggestion)} aria-label="save" disabled={updateSuggestionMutation.isPending}>
+                <SaveIcon fontSize="small" />
+              </IconButton>
+            ) : (
+              <IconButton size="small" onClick={() => handleEdit(suggestion)} aria-label="edit" disabled={updateSuggestionMutation.isPending}>
+                <EditIcon fontSize="small" />
+              </IconButton>
+            )}
+            {!isEditing && (
+              <IconButton size="small" onClick={() => requestDelete(suggestion.id)} aria-label="delete" disabled={updateSuggestionMutation.isPending || deleteSuggestionMutation.isPending}>
+                <DeleteIcon fontSize="small" />
+              </IconButton>
+            )}
+          </Box>
+        </Box>
+      </MuiCard>
+    );
+  };
+
   const renderTableView = () => (
     <>
       <Box sx={{ px: 2, py: 1, display: 'flex', justifyContent: 'flex-end' }}>
@@ -712,6 +773,11 @@ export const SuggestionsTable = ({ appView, onChangeAppView }: { appView: AppVie
           onRowsPerPageChange={handleChangeRowsPerPage}
         />
       </Box>
+      {isMobile ? (
+        <Box sx={{ px: 2, py: 1 }}>
+          {suggestionsData.map(renderRowCard)}
+        </Box>
+      ) : (
       <TableContainer sx={{ maxHeight: '70vh' }}>
         <MuiTable stickyHeader>
         <TableHead>
@@ -750,6 +816,7 @@ export const SuggestionsTable = ({ appView, onChangeAppView }: { appView: AppVie
         </TableBody>
         </MuiTable>
       </TableContainer>
+      )}
     </>
   );
 
