@@ -1,827 +1,839 @@
 {
-    "employees": [
-      {
-        "id": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
-        "name": "Priya Patel",
-        "department": "Engineering",
-        "riskLevel": "high"
-      },
-      {
-        "id": "6ba7b810-9dad-11d1-80b4-00c04fd430c8",
-        "name": "João Silva",
-        "department": "Finance",
-        "riskLevel": "medium"
-      },
-      {
-        "id": "6ba7b811-9dad-11d1-80b4-00c04fd430c8",
-        "name": "Fatima Al-Rashid",
-        "department": "Marketing",
-        "riskLevel": "low"
-      },
-      {
-        "id": "6ba7b812-9dad-11d1-80b4-00c04fd430c8",
-        "name": "Oluwaseun Adeyemi",
-        "department": "Operations",
-        "riskLevel": "high"
-      },
-      {
-        "id": "6ba7b813-9dad-11d1-80b4-00c04fd430c8",
-        "name": "Chen Wei-Lin",
-        "department": "HR",
-        "riskLevel": "medium"
-      },
-      {
-        "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
-        "name": "Sarah Johnson",
-        "department": "Engineering",
-        "riskLevel": "high"
-      },
-      {
-        "id": "b2c3d4e5-f6a7-8901-bcde-f12345678901",
-        "name": "Michael Chen",
-        "department": "Engineering",
-        "riskLevel": "medium"
-      },
-      {
-        "id": "c3d4e5f6-a7b8-9012-cdef-123456789012",
-        "name": "Emma Rodriguez",
-        "department": "Engineering",
-        "riskLevel": "low"
-      },
-      {
-        "id": "d4e5f6a7-b8c9-0123-def0-234567890123",
-        "name": "James Wilson",
-        "department": "Finance",
-        "riskLevel": "high"
-      },
-      {
-        "id": "e5f6a7b8-c9d0-1234-ef01-345678901234",
-        "name": "Sophie Martin",
-        "department": "Finance",
-        "riskLevel": "medium"
-      },
-      {
-        "id": "f6a7b8c9-d0e1-2345-f012-456789012345",
-        "name": "David Kim",
-        "department": "Finance",
-        "riskLevel": "low"
-      },
-      {
-        "id": "a7b8c9d0-e1f2-3456-0123-567890123456",
-        "name": "Olivia Brown",
-        "department": "Marketing",
-        "riskLevel": "medium"
-      },
-      {
-        "id": "b8c9d0e1-f2a3-4567-1234-678901234567",
-        "name": "Ryan Taylor",
-        "department": "Marketing",
-        "riskLevel": "high"
-      },
-      {
-        "id": "c9d0e1f2-a3b4-5678-2345-789012345678",
-        "name": "Isabella Garcia",
-        "department": "Marketing",
-        "riskLevel": "low"
-      },
-      {
-        "id": "d0e1f2a3-b4c5-6789-3456-890123456789",
-        "name": "Lucas Anderson",
-        "department": "Operations",
-        "riskLevel": "medium"
-      },
-      {
-        "id": "e1f2a3b4-c5d6-7890-4567-901234567890",
-        "name": "Mia Thompson",
-        "department": "Operations",
-        "riskLevel": "low"
-      },
-      {
-        "id": "f2a3b4c5-d6e7-8901-5678-012345678901",
-        "name": "Noah Martinez",
-        "department": "Operations",
-        "riskLevel": "high"
-      },
-      {
-        "id": "a3b4c5d6-e7f8-9012-6789-123456789012",
-        "name": "Ava Lee",
-        "department": "HR",
-        "riskLevel": "low"
-      },
-      {
-        "id": "b4c5d6e7-f8a9-0123-7890-234567890123",
-        "name": "William White",
-        "department": "HR",
-        "riskLevel": "medium"
-      },
-      {
-        "id": "c5d6e7f8-a9b0-1234-8901-345678901234",
-        "name": "Charlotte Harris",
-        "department": "Sales",
-        "riskLevel": "high"
-      },
-      {
-        "id": "d6e7f8a9-b0c1-2345-9012-456789012345",
-        "name": "Benjamin Clark",
-        "department": "Sales",
-        "riskLevel": "medium"
-      },
-      {
-        "id": "e7f8a9b0-c1d2-3456-0123-567890123456",
-        "name": "Amelia Lewis",
-        "department": "Sales",
-        "riskLevel": "low"
-      },
-      {
-        "id": "f8a9b0c1-d2e3-4567-1234-678901234567",
-        "name": "Henry Walker",
-        "department": "IT",
-        "riskLevel": "high"
-      },
-      {
-        "id": "a9b0c1d2-e3f4-5678-2345-789012345678",
-        "name": "Harper Hall",
-        "department": "IT",
-        "riskLevel": "medium"
-      },
-      {
-        "id": "b0c1d2e3-f4a5-6789-3456-890123456789",
-        "name": "Evelyn Young",
-        "department": "IT",
-        "riskLevel": "low"
-      },
-      {
-        "id": "c1d2e3f4-a5b6-7890-4567-901234567890",
-        "name": "Alexander King",
-        "department": "Legal",
-        "riskLevel": "medium"
-      },
-      {
-        "id": "d2e3f4a5-b6c7-8901-5678-012345678901",
-        "name": "Grace Wright",
-        "department": "Legal",
-        "riskLevel": "low"
-      },
-      {
-        "id": "e3f4a5b6-c7d8-9012-6789-123456789012",
-        "name": "Daniel Lopez",
-        "department": "Legal",
-        "riskLevel": "high"
-      },
-      {
-        "id": "f4a5b6c7-d8e9-0123-7890-234567890123",
-        "name": "Lily Hill",
-        "department": "Engineering",
-        "riskLevel": "medium"
-      },
-      {
-        "id": "a5b6c7d8-e9f0-1234-8901-345678901234",
-        "name": "Matthew Scott",
-        "department": "Operations",
-        "riskLevel": "low"
-      }
-    ],
-    "suggestions": [
-      {
-        "id": "550e8400-e29b-41d4-a716-446655440001",
-        "employeeId": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
-        "type": "equipment",
-        "description": "Replace standard peripherals with ergonomic keyboard and mouse to reduce wrist strain",
-        "status": "pending",
-        "priority": "high",
-        "source": "vida",
-        "dateCreated": "2024-01-15T09:00:00Z",
-        "dateUpdated": "2024-01-15T09:00:00Z",
-        "notes": ""
-      },
-      {
-        "id": "550e8400-e29b-41d4-a716-446655440002",
-        "employeeId": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
-        "type": "exercise",
-        "description": "Daily 10-minute wrist and forearm strengthening routine",
-        "status": "in_progress",
-        "priority": "high",
-        "source": "vida",
-        "dateCreated": "2024-01-15T09:00:00Z",
-        "dateUpdated": "2024-01-18T14:30:00Z",
-        "notes": "Employee reports improvement in wrist comfort"
-      },
-      {
-        "id": "550e8400-e29b-41d4-a716-446655440003",
-        "employeeId": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
-        "type": "behavioural",
-        "description": "Take 2-minute break every 30 minutes to stretch and rest eyes",
-        "status": "completed",
-        "priority": "medium",
-        "source": "vida",
-        "dateCreated": "2024-01-10T11:00:00Z",
-        "dateUpdated": "2024-01-20T16:00:00Z",
-        "dateCompleted": "2024-01-20T16:00:00Z",
-        "notes": "Using Pomodoro timer app successfully"
-      },
-      {
-        "id": "550e8400-e29b-41d4-a716-446655440004",
-        "employeeId": "6ba7b810-9dad-11d1-80b4-00c04fd430c8",
-        "type": "equipment",
-        "description": "Install adjustable monitor arm to achieve proper eye level (top of screen at eye height)",
-        "status": "in_progress",
-        "priority": "medium",
-        "source": "vida",
-        "dateCreated": "2024-01-16T10:30:00Z",
-        "dateUpdated": "2024-01-19T09:15:00Z",
-        "notes": "Order placed, awaiting delivery"
-      },
-      {
-        "id": "550e8400-e29b-41d4-a716-446655440005",
-        "employeeId": "6ba7b810-9dad-11d1-80b4-00c04fd430c8",
-        "type": "lifestyle",
-        "description": "Use supportive pillow and maintain neutral spine position during sleep",
-        "status": "pending",
-        "priority": "low",
-        "source": "vida",
-        "dateCreated": "2024-01-17T08:00:00Z",
-        "dateUpdated": "2024-01-17T08:00:00Z",
-        "notes": ""
-      },
-      {
-        "id": "550e8400-e29b-41d4-a716-446655440006",
-        "employeeId": "6ba7b811-9dad-11d1-80b4-00c04fd430c8",
-        "type": "exercise",
-        "description": "Specific core exercises 3x per week as demonstrated in VIDA app",
-        "status": "in_progress",
-        "priority": "medium",
-        "source": "vida",
-        "dateCreated": "2024-01-14T13:00:00Z",
-        "dateUpdated": "2024-01-21T10:00:00Z",
-        "notes": "Finding morning sessions work best"
-      },
-      {
-        "id": "550e8400-e29b-41d4-a716-446655440007",
-        "employeeId": "6ba7b811-9dad-11d1-80b4-00c04fd430c8",
-        "type": "behavioural",
-        "description": "Set hourly reminders to check and correct sitting posture",
-        "status": "pending",
-        "priority": "low",
-        "source": "vida",
-        "dateCreated": "2024-01-20T15:30:00Z",
-        "dateUpdated": "2024-01-20T15:30:00Z",
-        "notes": "Suggested after workplace assessment"
-      },
-      {
-        "id": "550e8400-e29b-41d4-a716-446655440008",
-        "employeeId": "6ba7b812-9dad-11d1-80b4-00c04fd430c8",
-        "type": "equipment",
-        "description": "Provide sit-stand desk converter to alternate positions throughout the day",
-        "status": "pending",
-        "priority": "high",
-        "source": "vida",
-        "dateCreated": "2024-01-12T09:00:00Z",
-        "dateUpdated": "2024-01-12T09:00:00Z",
-        "notes": ""
-      },
-      {
-        "id": "550e8400-e29b-41d4-a716-446655440009",
-        "employeeId": "6ba7b812-9dad-11d1-80b4-00c04fd430c8",
-        "type": "equipment",
-        "description": "Ergonomic lumbar support for existing office chair",
-        "status": "completed",
-        "priority": "high",
-        "source": "admin",
-        "createdBy": "hsmanager@company.com",
-        "dateCreated": "2024-01-08T10:00:00Z",
-        "dateUpdated": "2024-01-15T14:00:00Z",
-        "dateCompleted": "2024-01-15T14:00:00Z",
-        "notes": "Employee reports significant improvement"
-      },
-      {
-        "id": "550e8400-e29b-41d4-a716-446655440010",
-        "employeeId": "6ba7b812-9dad-11d1-80b4-00c04fd430c8",
-        "type": "lifestyle",
-        "description": "Aim for 2L of water daily to maintain disc hydration and reduce back stiffness",
-        "status": "in_progress",
-        "priority": "medium",
-        "source": "vida",
-        "dateCreated": "2024-01-13T11:00:00Z",
-        "dateUpdated": "2024-01-20T09:00:00Z",
-        "notes": "Using water tracking app"
-      },
-      {
-        "id": "550e8400-e29b-41d4-a716-446655440013",
-        "employeeId": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
-        "type": "lifestyle",
-        "description": "Limit to 2 cups of coffee daily to reduce muscle tension",
-        "status": "pending",
-        "priority": "low",
-        "source": "vida",
-        "dateCreated": "2024-01-20T08:00:00Z",
-        "dateUpdated": "2024-01-20T08:00:00Z",
-        "notes": ""
-      },
-      {
-        "id": "550e8400-e29b-41d4-a716-446655440014",
-        "employeeId": "6ba7b810-9dad-11d1-80b4-00c04fd430c8",
-        "type": "exercise",
-        "description": "20-20-20 rule: Every 20 minutes, look at something 20 feet away for 20 seconds",
-        "status": "in_progress",
-        "priority": "medium",
-        "source": "vida",
-        "dateCreated": "2024-01-18T10:00:00Z",
-        "dateUpdated": "2024-01-21T11:30:00Z",
-        "notes": "Reminder app installed"
-      },
-      {
-        "id": "550e8400-e29b-41d4-a716-446655440015",
-        "employeeId": "6ba7b811-9dad-11d1-80b4-00c04fd430c8",
-        "type": "equipment",
-        "description": "Adjustable document holder to reduce neck strain when referencing papers",
-        "status": "overdue",
-        "priority": "low",
-        "source": "vida",
-        "dateCreated": "2023-12-15T09:00:00Z",
-        "dateUpdated": "2023-12-15T09:00:00Z",
-        "notes": "Budget approval pending"
-      },
-      {
-        "id": "660e8400-e29b-41d4-a716-446655440016",
-        "employeeId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
-        "type": "equipment",
-        "description": "Standing desk with adjustable height mechanism",
-        "status": "pending",
-        "priority": "high",
-        "source": "vida",
-        "dateCreated": "2024-01-22T09:00:00Z",
-        "dateUpdated": "2024-01-22T09:00:00Z",
-        "notes": ""
-      },
-      {
-        "id": "660e8400-e29b-41d4-a716-446655440017",
-        "employeeId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
-        "type": "exercise",
-        "description": "Upper body stretches every hour during coding sessions",
-        "status": "in_progress",
-        "priority": "high",
-        "source": "vida",
-        "dateCreated": "2024-01-21T10:00:00Z",
-        "dateUpdated": "2024-01-23T14:00:00Z",
-        "notes": "Using stretch reminder app"
-      },
-      {
-        "id": "660e8400-e29b-41d4-a716-446655440018",
-        "employeeId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
-        "type": "behavioural",
-        "description": "Implement blue light filter on all devices after 6 PM",
-        "status": "completed",
-        "priority": "medium",
-        "source": "vida",
-        "dateCreated": "2024-01-19T08:00:00Z",
-        "dateUpdated": "2024-01-25T16:00:00Z",
-        "dateCompleted": "2024-01-25T16:00:00Z",
-        "notes": "Filter activated on all devices"
-      },
-      {
-        "id": "660e8400-e29b-41d4-a716-446655440019",
-        "employeeId": "b2c3d4e5-f6a7-8901-bcde-f12345678901",
-        "type": "equipment",
-        "description": "Footrest to maintain proper leg posture",
-        "status": "pending",
-        "priority": "medium",
-        "source": "vida",
-        "dateCreated": "2024-01-24T11:00:00Z",
-        "dateUpdated": "2024-01-24T11:00:00Z",
-        "notes": ""
-      },
-      {
-        "id": "660e8400-e29b-41d4-a716-446655440020",
-        "employeeId": "b2c3d4e5-f6a7-8901-bcde-f12345678901",
-        "type": "lifestyle",
-        "description": "Reduce screen time before bed by 1 hour",
-        "status": "in_progress",
-        "priority": "low",
-        "source": "vida",
-        "dateCreated": "2024-01-23T09:00:00Z",
-        "dateUpdated": "2024-01-26T10:00:00Z",
-        "notes": "Making progress, down 30 minutes"
-      },
-      {
-        "id": "660e8400-e29b-41d4-a716-446655440021",
-        "employeeId": "c3d4e5f6-a7b8-9012-cdef-123456789012",
-        "type": "equipment",
-        "description": "Anti-glare screen protector for laptop",
-        "status": "completed",
-        "priority": "low",
-        "source": "admin",
-        "createdBy": "hsmanager@company.com",
-        "dateCreated": "2024-01-18T10:00:00Z",
-        "dateUpdated": "2024-01-22T15:00:00Z",
-        "dateCompleted": "2024-01-22T15:00:00Z",
-        "notes": "Installed successfully"
-      },
-      {
-        "id": "660e8400-e29b-41d4-a716-446655440022",
-        "employeeId": "c3d4e5f6-a7b8-9012-cdef-123456789012",
-        "type": "exercise",
-        "description": "Neck rotation exercises every 2 hours",
-        "status": "in_progress",
-        "priority": "medium",
-        "source": "vida",
-        "dateCreated": "2024-01-20T13:00:00Z",
-        "dateUpdated": "2024-01-25T11:00:00Z",
-        "notes": "Reminders set on phone"
-      },
-      {
-        "id": "660e8400-e29b-41d4-a716-446655440023",
-        "employeeId": "d4e5f6a7-b8c9-0123-def0-234567890123",
-        "type": "equipment",
-        "description": "Ergonomic chair with adjustable armrests",
-        "status": "pending",
-        "priority": "high",
-        "source": "vida",
-        "dateCreated": "2024-01-25T09:00:00Z",
-        "dateUpdated": "2024-01-25T09:00:00Z",
-        "notes": ""
-      },
-      {
-        "id": "660e8400-e29b-41d4-a716-446655440024",
-        "employeeId": "d4e5f6a7-b8c9-0123-def0-234567890123",
-        "type": "behavioural",
-        "description": "Take 5-minute walking break every hour",
-        "status": "in_progress",
-        "priority": "high",
-        "source": "vida",
-        "dateCreated": "2024-01-24T08:00:00Z",
-        "dateUpdated": "2024-01-27T10:00:00Z",
-        "notes": "Using fitness tracker reminders"
-      },
-      {
-        "id": "660e8400-e29b-41d4-a716-446655440025",
-        "employeeId": "e5f6a7b8-c9d0-1234-ef01-345678901234",
-        "type": "lifestyle",
-        "description": "Meditation session for 10 minutes each morning",
-        "status": "completed",
-        "priority": "low",
-        "source": "vida",
-        "dateCreated": "2024-01-22T07:00:00Z",
-        "dateUpdated": "2024-01-28T08:00:00Z",
-        "dateCompleted": "2024-01-28T08:00:00Z",
-        "notes": "Using Headspace app"
-      },
-      {
-        "id": "660e8400-e29b-41d4-a716-446655440026",
-        "employeeId": "f6a7b8c9-d0e1-2345-f012-456789012345",
-        "type": "equipment",
-        "description": "Wrist support braces for typing sessions",
-        "status": "in_progress",
-        "priority": "medium",
-        "source": "vida",
-        "dateCreated": "2024-01-26T10:00:00Z",
-        "dateUpdated": "2024-01-28T14:00:00Z",
-        "notes": "Ordered, awaiting delivery"
-      },
-      {
-        "id": "660e8400-e29b-41d4-a716-446655440027",
-        "employeeId": "a7b8c9d0-e1f2-3456-0123-567890123456",
-        "type": "exercise",
-        "description": "Shoulder blade squeezes 10 times every hour",
-        "status": "pending",
-        "priority": "medium",
-        "source": "vida",
-        "dateCreated": "2024-01-27T09:00:00Z",
-        "dateUpdated": "2024-01-27T09:00:00Z",
-        "notes": ""
-      },
-      {
-        "id": "660e8400-e29b-41d4-a716-446655440028",
-        "employeeId": "a7b8c9d0-e1f2-3456-0123-567890123456",
-        "type": "behavioural",
-        "description": "Use dictation software for longer text entries",
-        "status": "in_progress",
-        "priority": "low",
-        "source": "vida",
-        "dateCreated": "2024-01-25T11:00:00Z",
-        "dateUpdated": "2024-01-28T13:00:00Z",
-        "notes": "Learning voice commands"
-      },
-      {
-        "id": "660e8400-e29b-41d4-a716-446655440029",
-        "employeeId": "b8c9d0e1-f2a3-4567-1234-678901234567",
-        "type": "equipment",
-        "description": "Under-desk keyboard tray",
-        "status": "pending",
-        "priority": "high",
-        "source": "vida",
-        "dateCreated": "2024-01-28T10:00:00Z",
-        "dateUpdated": "2024-01-28T10:00:00Z",
-        "notes": ""
-      },
-      {
-        "id": "660e8400-e29b-41d4-a716-446655440030",
-        "employeeId": "c9d0e1f2-a3b4-5678-2345-789012345678",
-        "type": "lifestyle",
-        "description": "Increase daily water intake to 3 liters",
-        "status": "completed",
-        "priority": "low",
-        "source": "vida",
-        "dateCreated": "2024-01-19T08:00:00Z",
-        "dateUpdated": "2024-01-26T09:00:00Z",
-        "dateCompleted": "2024-01-26T09:00:00Z",
-        "notes": "Using water bottle tracker"
-      },
-      {
-        "id": "660e8400-e29b-41d4-a716-446655440031",
-        "employeeId": "d0e1f2a3-b4c5-6789-3456-890123456789",
-        "type": "exercise",
-        "description": "Hip flexor stretches before and after work",
-        "status": "in_progress",
-        "priority": "medium",
-        "source": "vida",
-        "dateCreated": "2024-01-23T07:00:00Z",
-        "dateUpdated": "2024-01-27T08:00:00Z",
-        "notes": "Morning routine established"
-      },
-      {
-        "id": "660e8400-e29b-41d4-a716-446655440032",
-        "employeeId": "d0e1f2a3-b4c5-6789-3456-890123456789",
-        "type": "behavioural",
-        "description": "Set phone to silent mode during focused work periods",
-        "status": "pending",
-        "priority": "low",
-        "source": "vida",
-        "dateCreated": "2024-01-29T09:00:00Z",
-        "dateUpdated": "2024-01-29T09:00:00Z",
-        "notes": ""
-      },
-      {
-        "id": "660e8400-e29b-41d4-a716-446655440033",
-        "employeeId": "e1f2a3b4-c5d6-7890-4567-901234567890",
-        "type": "equipment",
-        "description": "Adjustable laptop stand for better viewing angle",
-        "status": "completed",
-        "priority": "medium",
-        "source": "admin",
-        "createdBy": "hsmanager@company.com",
-        "dateCreated": "2024-01-17T11:00:00Z",
-        "dateUpdated": "2024-01-21T15:00:00Z",
-        "dateCompleted": "2024-01-21T15:00:00Z",
-        "notes": "Employee satisfied with setup"
-      },
-      {
-        "id": "660e8400-e29b-41d4-a716-446655440034",
-        "employeeId": "f2a3b4c5-d6e7-8901-5678-012345678901",
-        "type": "exercise",
-        "description": "Lower back strengthening exercises 3 times per week",
-        "status": "pending",
-        "priority": "high",
-        "source": "vida",
-        "dateCreated": "2024-01-30T08:00:00Z",
-        "dateUpdated": "2024-01-30T08:00:00Z",
-        "notes": ""
-      },
-      {
-        "id": "660e8400-e29b-41d4-a716-446655440035",
-        "employeeId": "f2a3b4c5-d6e7-8901-5678-012345678901",
-        "type": "lifestyle",
-        "description": "Establish consistent sleep schedule of 8 hours",
-        "status": "in_progress",
-        "priority": "high",
-        "source": "vida",
-        "dateCreated": "2024-01-28T07:00:00Z",
-        "dateUpdated": "2024-01-31T09:00:00Z",
-        "notes": "Using sleep tracking app"
-      },
-      {
-        "id": "660e8400-e29b-41d4-a716-446655440036",
-        "employeeId": "a3b4c5d6-e7f8-9012-6789-123456789012",
-        "type": "equipment",
-        "description": "Cushioned floor mat for standing desk area",
-        "status": "pending",
-        "priority": "low",
-        "source": "vida",
-        "dateCreated": "2024-01-29T10:00:00Z",
-        "dateUpdated": "2024-01-29T10:00:00Z",
-        "notes": ""
-      },
-      {
-        "id": "660e8400-e29b-41d4-a716-446655440037",
-        "employeeId": "a3b4c5d6-e7f8-9012-6789-123456789012",
-        "type": "behavioural",
-        "description": "Practice proper breathing techniques during stressful moments",
-        "status": "completed",
-        "priority": "low",
-        "source": "vida",
-        "dateCreated": "2024-01-24T09:00:00Z",
-        "dateUpdated": "2024-01-29T16:00:00Z",
-        "dateCompleted": "2024-01-29T16:00:00Z",
-        "notes": "Using mindfulness app"
-      },
-      {
-        "id": "660e8400-e29b-41d4-a716-446655440038",
-        "employeeId": "b4c5d6e7-f8a9-0123-7890-234567890123",
-        "type": "exercise",
-        "description": "Desk yoga routine every afternoon",
-        "status": "in_progress",
-        "priority": "medium",
-        "source": "vida",
-        "dateCreated": "2024-01-26T13:00:00Z",
-        "dateUpdated": "2024-01-31T14:00:00Z",
-        "notes": "Following guided video sessions"
-      },
-      {
-        "id": "660e8400-e29b-41d4-a716-446655440039",
-        "employeeId": "c5d6e7f8-a9b0-1234-8901-345678901234",
-        "type": "equipment",
-        "description": "Eye strain reducing glasses",
-        "status": "completed",
-        "priority": "medium",
-        "source": "admin",
-        "createdBy": "hsmanager@company.com",
-        "dateCreated": "2024-01-20T10:00:00Z",
-        "dateUpdated": "2024-01-25T11:00:00Z",
-        "dateCompleted": "2024-01-25T11:00:00Z",
-        "notes": "Prescription updated"
-      },
-      {
-        "id": "660e8400-e29b-41d4-a716-446655440040",
-        "employeeId": "d6e7f8a9-b0c1-2345-9012-456789012345",
-        "type": "lifestyle",
-        "description": "Reduce processed food intake and increase whole foods",
-        "status": "pending",
-        "priority": "low",
-        "source": "vida",
-        "dateCreated": "2024-01-31T08:00:00Z",
-        "dateUpdated": "2024-01-31T08:00:00Z",
-        "notes": ""
-      },
-      {
-        "id": "660e8400-e29b-41d4-a716-446655440041",
-        "employeeId": "d6e7f8a9-b0c1-2345-9012-456789012345",
-        "type": "behavioural",
-        "description": "Implement task batching to reduce context switching",
-        "status": "in_progress",
-        "priority": "medium",
-        "source": "vida",
-        "dateCreated": "2024-01-30T09:00:00Z",
-        "dateUpdated": "2024-02-01T10:00:00Z",
-        "notes": "Using calendar blocking technique"
-      },
-      {
-        "id": "660e8400-e29b-41d4-a716-446655440042",
-        "employeeId": "e7f8a9b0-c1d2-3456-0123-567890123456",
-        "type": "exercise",
-        "description": "Forearm stretches before starting work",
-        "status": "completed",
-        "priority": "low",
-        "source": "vida",
-        "dateCreated": "2024-01-25T07:00:00Z",
-        "dateUpdated": "2024-01-30T08:00:00Z",
-        "dateCompleted": "2024-01-30T08:00:00Z",
-        "notes": "Routine established"
-      },
-      {
-        "id": "660e8400-e29b-41d4-a716-446655440043",
-        "employeeId": "f8a9b0c1-d2e3-4567-1234-678901234567",
-        "type": "equipment",
-        "description": "Dual monitor setup with proper alignment",
-        "status": "pending",
-        "priority": "high",
-        "source": "vida",
-        "dateCreated": "2024-02-01T09:00:00Z",
-        "dateUpdated": "2024-02-01T09:00:00Z",
-        "notes": ""
-      },
-      {
-        "id": "660e8400-e29b-41d4-a716-446655440044",
-        "employeeId": "a9b0c1d2-e3f4-5678-2345-789012345678",
-        "type": "lifestyle",
-        "description": "Take vitamin D supplement daily",
-        "status": "in_progress",
-        "priority": "low",
-        "source": "vida",
-        "dateCreated": "2024-01-27T08:00:00Z",
-        "dateUpdated": "2024-01-31T09:00:00Z",
-        "notes": "Added to morning routine"
-      },
-      {
-        "id": "660e8400-e29b-41d4-a716-446655440045",
-        "employeeId": "b0c1d2e3-f4a5-6789-3456-890123456789",
-        "type": "exercise",
-        "description": "Calf raises while standing at desk",
-        "status": "pending",
-        "priority": "low",
-        "source": "vida",
-        "dateCreated": "2024-02-02T10:00:00Z",
-        "dateUpdated": "2024-02-02T10:00:00Z",
-        "notes": ""
-      },
-      {
-        "id": "660e8400-e29b-41d4-a716-446655440046",
-        "employeeId": "b0c1d2e3-f4a5-6789-3456-890123456789",
-        "type": "behavioural",
-        "description": "Use focus mode on phone during work hours",
-        "status": "completed",
-        "priority": "medium",
-        "source": "vida",
-        "dateCreated": "2024-01-29T11:00:00Z",
-        "dateUpdated": "2024-02-01T15:00:00Z",
-        "dateCompleted": "2024-02-01T15:00:00Z",
-        "notes": "Distractions reduced significantly"
-      },
-      {
-        "id": "660e8400-e29b-41d4-a716-446655440047",
-        "employeeId": "c1d2e3f4-a5b6-7890-4567-901234567890",
-        "type": "equipment",
-        "description": "Noise-cancelling headphones for focus",
-        "status": "pending",
-        "priority": "medium",
-        "source": "vida",
-        "dateCreated": "2024-02-03T09:00:00Z",
-        "dateUpdated": "2024-02-03T09:00:00Z",
-        "notes": ""
-      },
-      {
-        "id": "660e8400-e29b-41d4-a716-446655440048",
-        "employeeId": "d2e3f4a5-b6c7-8901-5678-012345678901",
-        "type": "lifestyle",
-        "description": "Establish morning routine with 15 minutes of stretching",
-        "status": "in_progress",
-        "priority": "low",
-        "source": "vida",
-        "dateCreated": "2024-01-31T07:00:00Z",
-        "dateUpdated": "2024-02-02T08:00:00Z",
-        "notes": "Progressing well"
-      },
-      {
-        "id": "660e8400-e29b-41d4-a716-446655440049",
-        "employeeId": "e3f4a5b6-c7d8-9012-6789-123456789012",
-        "type": "exercise",
-        "description": "Posture correction exercises twice daily",
-        "status": "pending",
-        "priority": "high",
-        "source": "vida",
-        "dateCreated": "2024-02-04T08:00:00Z",
-        "dateUpdated": "2024-02-04T08:00:00Z",
-        "notes": ""
-      },
-      {
-        "id": "660e8400-e29b-41d4-a716-446655440050",
-        "employeeId": "f4a5b6c7-d8e9-0123-7890-234567890123",
-        "type": "behavioural",
-        "description": "Limit social media usage during work breaks",
-        "status": "completed",
-        "priority": "low",
-        "source": "vida",
-        "dateCreated": "2024-01-30T10:00:00Z",
-        "dateUpdated": "2024-02-03T16:00:00Z",
-        "dateCompleted": "2024-02-03T16:00:00Z",
-        "notes": "Using app blocker"
-      },
-      {
-        "id": "660e8400-e29b-41d4-a716-446655440051",
-        "employeeId": "a5b6c7d8-e9f0-1234-8901-345678901234",
-        "type": "equipment",
-        "description": "Gel mouse pad with wrist support",
-        "status": "in_progress",
-        "priority": "low",
-        "source": "vida",
-        "dateCreated": "2024-02-01T11:00:00Z",
-        "dateUpdated": "2024-02-04T13:00:00Z",
-        "notes": "Ordered online"
-      },
-      {
-        "id": "660e8400-e29b-41d4-a716-446655440052",
-        "employeeId": "6ba7b813-9dad-11d1-80b4-00c04fd430c8",
-        "type": "equipment",
-        "description": "Wireless headset for conference calls",
-        "status": "pending",
-        "priority": "medium",
-        "source": "vida",
-        "dateCreated": "2024-02-05T09:00:00Z",
-        "dateUpdated": "2024-02-05T09:00:00Z",
-        "notes": ""
-      },
-      {
-        "id": "660e8400-e29b-41d4-a716-446655440053",
-        "employeeId": "6ba7b813-9dad-11d1-80b4-00c04fd430c8",
-        "type": "exercise",
-        "description": "Deep breathing exercises during breaks",
-        "status": "completed",
-        "priority": "low",
-        "source": "vida",
-        "dateCreated": "2024-01-28T10:00:00Z",
-        "dateUpdated": "2024-02-02T11:00:00Z",
-        "dateCompleted": "2024-02-02T11:00:00Z",
-        "notes": "Helps with stress management"
-      },
-      {
-        "id": "660e8400-e29b-41d4-a716-446655440054",
-        "employeeId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
-        "type": "lifestyle",
-        "description": "Reduce caffeine intake after 2 PM",
-        "status": "pending",
-        "priority": "low",
-        "source": "vida",
-        "dateCreated": "2024-02-06T08:00:00Z",
-        "dateUpdated": "2024-02-06T08:00:00Z",
-        "notes": ""
-      }
-    ]
-  }
+  "employees": [
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+      "name": "Priya Patel",
+      "department": "Engineering",
+      "riskLevel": "high"
+    },
+    {
+      "id": "6ba7b810-9dad-11d1-80b4-00c04fd430c8",
+      "name": "João Silva",
+      "department": "Finance",
+      "riskLevel": "medium"
+    },
+    {
+      "id": "6ba7b811-9dad-11d1-80b4-00c04fd430c8",
+      "name": "Fatima Al-Rashid",
+      "department": "Marketing",
+      "riskLevel": "low"
+    },
+    {
+      "id": "6ba7b812-9dad-11d1-80b4-00c04fd430c8",
+      "name": "Oluwaseun Adeyemi",
+      "department": "Operations",
+      "riskLevel": "high"
+    },
+    {
+      "id": "6ba7b813-9dad-11d1-80b4-00c04fd430c8",
+      "name": "Chen Wei-Lin",
+      "department": "HR",
+      "riskLevel": "medium"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "name": "Sarah Johnson",
+      "department": "Engineering",
+      "riskLevel": "high"
+    },
+    {
+      "id": "b2c3d4e5-f6a7-8901-bcde-f12345678901",
+      "name": "Michael Chen",
+      "department": "Engineering",
+      "riskLevel": "medium"
+    },
+    {
+      "id": "c3d4e5f6-a7b8-9012-cdef-123456789012",
+      "name": "Emma Rodriguez",
+      "department": "Engineering",
+      "riskLevel": "low"
+    },
+    {
+      "id": "d4e5f6a7-b8c9-0123-def0-234567890123",
+      "name": "James Wilson",
+      "department": "Finance",
+      "riskLevel": "high"
+    },
+    {
+      "id": "e5f6a7b8-c9d0-1234-ef01-345678901234",
+      "name": "Sophie Martin",
+      "department": "Finance",
+      "riskLevel": "medium"
+    },
+    {
+      "id": "f6a7b8c9-d0e1-2345-f012-456789012345",
+      "name": "David Kim",
+      "department": "Finance",
+      "riskLevel": "low"
+    },
+    {
+      "id": "a7b8c9d0-e1f2-3456-0123-567890123456",
+      "name": "Olivia Brown",
+      "department": "Marketing",
+      "riskLevel": "medium"
+    },
+    {
+      "id": "b8c9d0e1-f2a3-4567-1234-678901234567",
+      "name": "Ryan Taylor",
+      "department": "Marketing",
+      "riskLevel": "high"
+    },
+    {
+      "id": "c9d0e1f2-a3b4-5678-2345-789012345678",
+      "name": "Isabella Garcia",
+      "department": "Marketing",
+      "riskLevel": "low"
+    },
+    {
+      "id": "d0e1f2a3-b4c5-6789-3456-890123456789",
+      "name": "Lucas Anderson",
+      "department": "Operations",
+      "riskLevel": "medium"
+    },
+    {
+      "id": "e1f2a3b4-c5d6-7890-4567-901234567890",
+      "name": "Mia Thompson",
+      "department": "Operations",
+      "riskLevel": "low"
+    },
+    {
+      "id": "f2a3b4c5-d6e7-8901-5678-012345678901",
+      "name": "Noah Martinez",
+      "department": "Operations",
+      "riskLevel": "high"
+    },
+    {
+      "id": "a3b4c5d6-e7f8-9012-6789-123456789012",
+      "name": "Ava Lee",
+      "department": "HR",
+      "riskLevel": "low"
+    },
+    {
+      "id": "b4c5d6e7-f8a9-0123-7890-234567890123",
+      "name": "William White",
+      "department": "HR",
+      "riskLevel": "medium"
+    },
+    {
+      "id": "c5d6e7f8-a9b0-1234-8901-345678901234",
+      "name": "Charlotte Harris",
+      "department": "Sales",
+      "riskLevel": "high"
+    },
+    {
+      "id": "d6e7f8a9-b0c1-2345-9012-456789012345",
+      "name": "Benjamin Clark",
+      "department": "Sales",
+      "riskLevel": "medium"
+    },
+    {
+      "id": "e7f8a9b0-c1d2-3456-0123-567890123456",
+      "name": "Amelia Lewis",
+      "department": "Sales",
+      "riskLevel": "low"
+    },
+    {
+      "id": "f8a9b0c1-d2e3-4567-1234-678901234567",
+      "name": "Henry Walker",
+      "department": "IT",
+      "riskLevel": "high"
+    },
+    {
+      "id": "a9b0c1d2-e3f4-5678-2345-789012345678",
+      "name": "Harper Hall",
+      "department": "IT",
+      "riskLevel": "medium"
+    },
+    {
+      "id": "b0c1d2e3-f4a5-6789-3456-890123456789",
+      "name": "Evelyn Young",
+      "department": "IT",
+      "riskLevel": "low"
+    },
+    {
+      "id": "c1d2e3f4-a5b6-7890-4567-901234567890",
+      "name": "Alexander King",
+      "department": "Legal",
+      "riskLevel": "medium"
+    },
+    {
+      "id": "d2e3f4a5-b6c7-8901-5678-012345678901",
+      "name": "Grace Wright",
+      "department": "Legal",
+      "riskLevel": "low"
+    },
+    {
+      "id": "e3f4a5b6-c7d8-9012-6789-123456789012",
+      "name": "Daniel Lopez",
+      "department": "Legal",
+      "riskLevel": "high"
+    },
+    {
+      "id": "f4a5b6c7-d8e9-0123-7890-234567890123",
+      "name": "Lily Hill",
+      "department": "Engineering",
+      "riskLevel": "medium"
+    },
+    {
+      "id": "a5b6c7d8-e9f0-1234-8901-345678901234",
+      "name": "Matthew Scott",
+      "department": "Operations",
+      "riskLevel": "low"
+    }
+  ],
+  "suggestions": [
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440001",
+      "employeeId": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+      "type": "equipment",
+      "description": "Replace standard peripherals with ergonomic keyboard and mouse to reduce wrist strain",
+      "status": "in_progress",
+      "priority": "high",
+      "source": "vida",
+      "dateCreated": "2024-01-15T09:00:00Z",
+      "dateUpdated": "2025-10-30T11:33:00.987Z",
+      "notes": ""
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440002",
+      "employeeId": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+      "type": "exercise",
+      "description": "Daily 10-minute wrist and forearm strengthening routine",
+      "status": "in_progress",
+      "priority": "high",
+      "source": "vida",
+      "dateCreated": "2024-01-15T09:00:00Z",
+      "dateUpdated": "2024-01-18T14:30:00Z",
+      "notes": "Employee reports improvement in wrist comfort"
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440003",
+      "employeeId": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+      "type": "behavioural",
+      "description": "Take 2-minute break every 30 minutes to stretch and rest eyes",
+      "status": "completed",
+      "priority": "high",
+      "source": "vida",
+      "dateCreated": "2024-01-10T11:00:00Z",
+      "dateUpdated": "2025-10-30T10:52:38.222Z",
+      "dateCompleted": "2024-01-20T16:00:00Z",
+      "notes": "Using Pomodoro timer app successfully"
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440004",
+      "employeeId": "6ba7b810-9dad-11d1-80b4-00c04fd430c8",
+      "type": "equipment",
+      "description": "Install adjustable monitor arm to achieve proper eye level (top of screen at eye height)",
+      "status": "in_progress",
+      "priority": "high",
+      "source": "vida",
+      "dateCreated": "2024-01-16T10:30:00Z",
+      "dateUpdated": "2025-10-30T10:52:38.220Z",
+      "notes": "Order placed, awaiting delivery"
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440005",
+      "employeeId": "6ba7b810-9dad-11d1-80b4-00c04fd430c8",
+      "type": "lifestyle",
+      "description": "Use supportive pillow and maintain neutral spine position during sleep",
+      "status": "pending",
+      "priority": "low",
+      "source": "vida",
+      "dateCreated": "2024-01-17T08:00:00Z",
+      "dateUpdated": "2024-01-17T08:00:00Z",
+      "notes": ""
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440006",
+      "employeeId": "6ba7b811-9dad-11d1-80b4-00c04fd430c8",
+      "type": "lifestyle",
+      "description": "Changed",
+      "status": "completed",
+      "priority": "high",
+      "source": "vida",
+      "dateCreated": "2024-01-14T13:00:00Z",
+      "dateUpdated": "2025-10-30T10:56:10.815Z",
+      "notes": "Finding morning sessions work best"
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440007",
+      "employeeId": "6ba7b811-9dad-11d1-80b4-00c04fd430c8",
+      "type": "behavioural",
+      "description": "Set hourly reminders to check and correct sitting posture",
+      "status": "pending",
+      "priority": "low",
+      "source": "vida",
+      "dateCreated": "2024-01-20T15:30:00Z",
+      "dateUpdated": "2024-01-20T15:30:00Z",
+      "notes": "Suggested after workplace assessment"
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440008",
+      "employeeId": "6ba7b812-9dad-11d1-80b4-00c04fd430c8",
+      "type": "equipment",
+      "description": "Provide sit-stand desk converter to alternate positions throughout the day",
+      "status": "pending",
+      "priority": "high",
+      "source": "vida",
+      "dateCreated": "2024-01-12T09:00:00Z",
+      "dateUpdated": "2025-10-30T10:52:58.147Z",
+      "notes": ""
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440009",
+      "employeeId": "6ba7b812-9dad-11d1-80b4-00c04fd430c8",
+      "type": "equipment",
+      "description": "Ergonomic lumbar support for existing office chair",
+      "status": "completed",
+      "priority": "high",
+      "source": "admin",
+      "createdBy": "hsmanager@company.com",
+      "dateCreated": "2024-01-08T10:00:00Z",
+      "dateUpdated": "2024-01-15T14:00:00Z",
+      "dateCompleted": "2024-01-15T14:00:00Z",
+      "notes": "Employee reports significant improvement"
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440010",
+      "employeeId": "6ba7b812-9dad-11d1-80b4-00c04fd430c8",
+      "type": "lifestyle",
+      "description": "Aim for 2L of water daily to maintain disc hydration and reduce back stiffness",
+      "status": "in_progress",
+      "priority": "high",
+      "source": "vida",
+      "dateCreated": "2024-01-13T11:00:00Z",
+      "dateUpdated": "2025-10-30T10:52:58.148Z",
+      "notes": "Using water tracking app"
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440013",
+      "employeeId": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+      "type": "lifestyle",
+      "description": "Limit to 2 cups of coffee daily to reduce muscle tension",
+      "status": "pending",
+      "priority": "low",
+      "source": "vida",
+      "dateCreated": "2024-01-20T08:00:00Z",
+      "dateUpdated": "2024-01-20T08:00:00Z",
+      "notes": ""
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440014",
+      "employeeId": "6ba7b810-9dad-11d1-80b4-00c04fd430c8",
+      "type": "exercise",
+      "description": "20-20-20 rule: Every 20 minutes, look at something 20 feet away for 20 seconds",
+      "status": "in_progress",
+      "priority": "medium",
+      "source": "vida",
+      "dateCreated": "2024-01-18T10:00:00Z",
+      "dateUpdated": "2024-01-21T11:30:00Z",
+      "notes": "Reminder app installed"
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440015",
+      "employeeId": "6ba7b811-9dad-11d1-80b4-00c04fd430c8",
+      "type": "equipment",
+      "description": "Adjustable document holder to reduce neck strain when referencing papers",
+      "status": "overdue",
+      "priority": "low",
+      "source": "vida",
+      "dateCreated": "2023-12-15T09:00:00Z",
+      "dateUpdated": "2023-12-15T09:00:00Z",
+      "notes": "Budget approval pending"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440016",
+      "employeeId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "type": "equipment",
+      "description": "Standing desk with adjustable height mechanism",
+      "status": "pending",
+      "priority": "high",
+      "source": "vida",
+      "dateCreated": "2024-01-22T09:00:00Z",
+      "dateUpdated": "2024-01-22T09:00:00Z",
+      "notes": ""
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440017",
+      "employeeId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "type": "exercise",
+      "description": "Upper body stretches every hour during coding sessions",
+      "status": "in_progress",
+      "priority": "high",
+      "source": "vida",
+      "dateCreated": "2024-01-21T10:00:00Z",
+      "dateUpdated": "2024-01-23T14:00:00Z",
+      "notes": "Using stretch reminder app"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440018",
+      "employeeId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "type": "behavioural",
+      "description": "Implement blue light filter on all devices after 6 PM",
+      "status": "completed",
+      "priority": "low",
+      "source": "vida",
+      "dateCreated": "2024-01-19T08:00:00Z",
+      "dateUpdated": "2025-10-29T16:22:50.495Z",
+      "dateCompleted": "2024-01-25T16:00:00Z",
+      "notes": "Filter activated on all devices"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440019",
+      "employeeId": "b2c3d4e5-f6a7-8901-bcde-f12345678901",
+      "type": "equipment",
+      "description": "Footrest to maintain proper leg posture",
+      "status": "pending",
+      "priority": "medium",
+      "source": "vida",
+      "dateCreated": "2024-01-24T11:00:00Z",
+      "dateUpdated": "2024-01-24T11:00:00Z",
+      "notes": ""
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440020",
+      "employeeId": "b2c3d4e5-f6a7-8901-bcde-f12345678901",
+      "type": "lifestyle",
+      "description": "Reduce screen time before bed by 1 hour",
+      "status": "in_progress",
+      "priority": "low",
+      "source": "vida",
+      "dateCreated": "2024-01-23T09:00:00Z",
+      "dateUpdated": "2024-01-26T10:00:00Z",
+      "notes": "Making progress, down 30 minutes"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440021",
+      "employeeId": "c3d4e5f6-a7b8-9012-cdef-123456789012",
+      "type": "equipment",
+      "description": "Anti-glare screen protector for laptop",
+      "status": "completed",
+      "priority": "low",
+      "source": "admin",
+      "createdBy": "hsmanager@company.com",
+      "dateCreated": "2024-01-18T10:00:00Z",
+      "dateUpdated": "2024-01-22T15:00:00Z",
+      "dateCompleted": "2024-01-22T15:00:00Z",
+      "notes": "Installed successfully"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440022",
+      "employeeId": "c3d4e5f6-a7b8-9012-cdef-123456789012",
+      "type": "exercise",
+      "description": "Neck rotation exercises every 2 hours",
+      "status": "in_progress",
+      "priority": "medium",
+      "source": "vida",
+      "dateCreated": "2024-01-20T13:00:00Z",
+      "dateUpdated": "2024-01-25T11:00:00Z",
+      "notes": "Reminders set on phone"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440023",
+      "employeeId": "d4e5f6a7-b8c9-0123-def0-234567890123",
+      "type": "equipment",
+      "description": "Ergonomic chair with adjustable armrests",
+      "status": "pending",
+      "priority": "high",
+      "source": "vida",
+      "dateCreated": "2024-01-25T09:00:00Z",
+      "dateUpdated": "2024-01-25T09:00:00Z",
+      "notes": ""
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440024",
+      "employeeId": "d4e5f6a7-b8c9-0123-def0-234567890123",
+      "type": "behavioural",
+      "description": "Take 5-minute walking break every hour",
+      "status": "in_progress",
+      "priority": "high",
+      "source": "vida",
+      "dateCreated": "2024-01-24T08:00:00Z",
+      "dateUpdated": "2024-01-27T10:00:00Z",
+      "notes": "Using fitness tracker reminders"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440025",
+      "employeeId": "e5f6a7b8-c9d0-1234-ef01-345678901234",
+      "type": "lifestyle",
+      "description": "Meditation session for 10 minutes each morning",
+      "status": "completed",
+      "priority": "low",
+      "source": "vida",
+      "dateCreated": "2024-01-22T07:00:00Z",
+      "dateUpdated": "2024-01-28T08:00:00Z",
+      "dateCompleted": "2024-01-28T08:00:00Z",
+      "notes": "Using Headspace app"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440026",
+      "employeeId": "f6a7b8c9-d0e1-2345-f012-456789012345",
+      "type": "equipment",
+      "description": "Wrist support braces for typing sessions",
+      "status": "in_progress",
+      "priority": "medium",
+      "source": "vida",
+      "dateCreated": "2024-01-26T10:00:00Z",
+      "dateUpdated": "2024-01-28T14:00:00Z",
+      "notes": "Ordered, awaiting delivery"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440027",
+      "employeeId": "a7b8c9d0-e1f2-3456-0123-567890123456",
+      "type": "exercise",
+      "description": "Shoulder blade squeezes 10 times every hour",
+      "status": "pending",
+      "priority": "medium",
+      "source": "vida",
+      "dateCreated": "2024-01-27T09:00:00Z",
+      "dateUpdated": "2024-01-27T09:00:00Z",
+      "notes": ""
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440028",
+      "employeeId": "a7b8c9d0-e1f2-3456-0123-567890123456",
+      "type": "behavioural",
+      "description": "Use dictation software for longer text entries",
+      "status": "in_progress",
+      "priority": "low",
+      "source": "vida",
+      "dateCreated": "2024-01-25T11:00:00Z",
+      "dateUpdated": "2024-01-28T13:00:00Z",
+      "notes": "Learning voice commands"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440029",
+      "employeeId": "b8c9d0e1-f2a3-4567-1234-678901234567",
+      "type": "equipment",
+      "description": "Under-desk keyboard tray",
+      "status": "pending",
+      "priority": "high",
+      "source": "vida",
+      "dateCreated": "2024-01-28T10:00:00Z",
+      "dateUpdated": "2024-01-28T10:00:00Z",
+      "notes": ""
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440030",
+      "employeeId": "c9d0e1f2-a3b4-5678-2345-789012345678",
+      "type": "lifestyle",
+      "description": "Increase daily water intake to 3 liters",
+      "status": "completed",
+      "priority": "low",
+      "source": "vida",
+      "dateCreated": "2024-01-19T08:00:00Z",
+      "dateUpdated": "2024-01-26T09:00:00Z",
+      "dateCompleted": "2024-01-26T09:00:00Z",
+      "notes": "Using water bottle tracker"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440031",
+      "employeeId": "d0e1f2a3-b4c5-6789-3456-890123456789",
+      "type": "exercise",
+      "description": "Hip flexor stretches before and after work",
+      "status": "in_progress",
+      "priority": "medium",
+      "source": "vida",
+      "dateCreated": "2024-01-23T07:00:00Z",
+      "dateUpdated": "2024-01-27T08:00:00Z",
+      "notes": "Morning routine established"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440032",
+      "employeeId": "d0e1f2a3-b4c5-6789-3456-890123456789",
+      "type": "behavioural",
+      "description": "Set phone to silent mode during focused work periods",
+      "status": "pending",
+      "priority": "low",
+      "source": "vida",
+      "dateCreated": "2024-01-29T09:00:00Z",
+      "dateUpdated": "2024-01-29T09:00:00Z",
+      "notes": ""
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440033",
+      "employeeId": "e1f2a3b4-c5d6-7890-4567-901234567890",
+      "type": "equipment",
+      "description": "Adjustable laptop stand for better viewing angle",
+      "status": "completed",
+      "priority": "medium",
+      "source": "admin",
+      "createdBy": "hsmanager@company.com",
+      "dateCreated": "2024-01-17T11:00:00Z",
+      "dateUpdated": "2024-01-21T15:00:00Z",
+      "dateCompleted": "2024-01-21T15:00:00Z",
+      "notes": "Employee satisfied with setup"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440035",
+      "employeeId": "f2a3b4c5-d6e7-8901-5678-012345678901",
+      "type": "lifestyle",
+      "description": "Establish consistent sleep schedule of 8 hours",
+      "status": "in_progress",
+      "priority": "high",
+      "source": "vida",
+      "dateCreated": "2024-01-28T07:00:00Z",
+      "dateUpdated": "2024-01-31T09:00:00Z",
+      "notes": "Using sleep tracking app"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440036",
+      "employeeId": "a3b4c5d6-e7f8-9012-6789-123456789012",
+      "type": "equipment",
+      "description": "Cushioned floor mat for standing desk area",
+      "status": "pending",
+      "priority": "low",
+      "source": "vida",
+      "dateCreated": "2024-01-29T10:00:00Z",
+      "dateUpdated": "2024-01-29T10:00:00Z",
+      "notes": ""
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440037",
+      "employeeId": "a3b4c5d6-e7f8-9012-6789-123456789012",
+      "type": "behavioural",
+      "description": "Practice proper breathing techniques during stressful moments",
+      "status": "completed",
+      "priority": "low",
+      "source": "vida",
+      "dateCreated": "2024-01-24T09:00:00Z",
+      "dateUpdated": "2024-01-29T16:00:00Z",
+      "dateCompleted": "2024-01-29T16:00:00Z",
+      "notes": "Using mindfulness app"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440038",
+      "employeeId": "b4c5d6e7-f8a9-0123-7890-234567890123",
+      "type": "exercise",
+      "description": "Desk yoga routine every afternoon",
+      "status": "in_progress",
+      "priority": "medium",
+      "source": "vida",
+      "dateCreated": "2024-01-26T13:00:00Z",
+      "dateUpdated": "2024-01-31T14:00:00Z",
+      "notes": "Following guided video sessions"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440039",
+      "employeeId": "c5d6e7f8-a9b0-1234-8901-345678901234",
+      "type": "equipment",
+      "description": "Eye strain reducing glasses",
+      "status": "completed",
+      "priority": "medium",
+      "source": "admin",
+      "createdBy": "hsmanager@company.com",
+      "dateCreated": "2024-01-20T10:00:00Z",
+      "dateUpdated": "2024-01-25T11:00:00Z",
+      "dateCompleted": "2024-01-25T11:00:00Z",
+      "notes": "Prescription updated"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440040",
+      "employeeId": "d6e7f8a9-b0c1-2345-9012-456789012345",
+      "type": "lifestyle",
+      "description": "Reduce processed food intake and increase whole foods",
+      "status": "pending",
+      "priority": "low",
+      "source": "vida",
+      "dateCreated": "2024-01-31T08:00:00Z",
+      "dateUpdated": "2024-01-31T08:00:00Z",
+      "notes": ""
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440041",
+      "employeeId": "d6e7f8a9-b0c1-2345-9012-456789012345",
+      "type": "behavioural",
+      "description": "Implement task batching to reduce context switching",
+      "status": "in_progress",
+      "priority": "medium",
+      "source": "vida",
+      "dateCreated": "2024-01-30T09:00:00Z",
+      "dateUpdated": "2024-02-01T10:00:00Z",
+      "notes": "Using calendar blocking technique"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440042",
+      "employeeId": "e7f8a9b0-c1d2-3456-0123-567890123456",
+      "type": "exercise",
+      "description": "Forearm stretches before starting work",
+      "status": "completed",
+      "priority": "low",
+      "source": "vida",
+      "dateCreated": "2024-01-25T07:00:00Z",
+      "dateUpdated": "2024-01-30T08:00:00Z",
+      "dateCompleted": "2024-01-30T08:00:00Z",
+      "notes": "Routine established"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440043",
+      "employeeId": "f8a9b0c1-d2e3-4567-1234-678901234567",
+      "type": "equipment",
+      "description": "Dual monitor setup with proper alignment",
+      "status": "pending",
+      "priority": "high",
+      "source": "vida",
+      "dateCreated": "2024-02-01T09:00:00Z",
+      "dateUpdated": "2024-02-01T09:00:00Z",
+      "notes": ""
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440044",
+      "employeeId": "a9b0c1d2-e3f4-5678-2345-789012345678",
+      "type": "lifestyle",
+      "description": "Take vitamin D supplement daily",
+      "status": "in_progress",
+      "priority": "low",
+      "source": "vida",
+      "dateCreated": "2024-01-27T08:00:00Z",
+      "dateUpdated": "2024-01-31T09:00:00Z",
+      "notes": "Added to morning routine"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440045",
+      "employeeId": "b0c1d2e3-f4a5-6789-3456-890123456789",
+      "type": "exercise",
+      "description": "Calf raises while standing at desk",
+      "status": "pending",
+      "priority": "low",
+      "source": "vida",
+      "dateCreated": "2024-02-02T10:00:00Z",
+      "dateUpdated": "2024-02-02T10:00:00Z",
+      "notes": ""
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440046",
+      "employeeId": "b0c1d2e3-f4a5-6789-3456-890123456789",
+      "type": "behavioural",
+      "description": "Use focus mode on phone during work hours",
+      "status": "completed",
+      "priority": "medium",
+      "source": "vida",
+      "dateCreated": "2024-01-29T11:00:00Z",
+      "dateUpdated": "2024-02-01T15:00:00Z",
+      "dateCompleted": "2024-02-01T15:00:00Z",
+      "notes": "Distractions reduced significantly"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440047",
+      "employeeId": "c1d2e3f4-a5b6-7890-4567-901234567890",
+      "type": "equipment",
+      "description": "Noise-cancelling headphones for focus",
+      "status": "pending",
+      "priority": "medium",
+      "source": "vida",
+      "dateCreated": "2024-02-03T09:00:00Z",
+      "dateUpdated": "2024-02-03T09:00:00Z",
+      "notes": ""
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440048",
+      "employeeId": "d2e3f4a5-b6c7-8901-5678-012345678901",
+      "type": "lifestyle",
+      "description": "Establish morning routine with 15 minutes of stretching",
+      "status": "in_progress",
+      "priority": "low",
+      "source": "vida",
+      "dateCreated": "2024-01-31T07:00:00Z",
+      "dateUpdated": "2024-02-02T08:00:00Z",
+      "notes": "Progressing well"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440049",
+      "employeeId": "e3f4a5b6-c7d8-9012-6789-123456789012",
+      "type": "exercise",
+      "description": "Posture correction exercises twice daily",
+      "status": "pending",
+      "priority": "high",
+      "source": "vida",
+      "dateCreated": "2024-02-04T08:00:00Z",
+      "dateUpdated": "2024-02-04T08:00:00Z",
+      "notes": ""
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440050",
+      "employeeId": "f4a5b6c7-d8e9-0123-7890-234567890123",
+      "type": "behavioural",
+      "description": "Limit social media usage during work breaks",
+      "status": "completed",
+      "priority": "low",
+      "source": "vida",
+      "dateCreated": "2024-01-30T10:00:00Z",
+      "dateUpdated": "2024-02-03T16:00:00Z",
+      "dateCompleted": "2024-02-03T16:00:00Z",
+      "notes": "Using app blocker"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440051",
+      "employeeId": "a5b6c7d8-e9f0-1234-8901-345678901234",
+      "type": "equipment",
+      "description": "Gel mouse pad with wrist support",
+      "status": "in_progress",
+      "priority": "low",
+      "source": "vida",
+      "dateCreated": "2024-02-01T11:00:00Z",
+      "dateUpdated": "2024-02-04T13:00:00Z",
+      "notes": "Ordered online"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440052",
+      "employeeId": "6ba7b813-9dad-11d1-80b4-00c04fd430c8",
+      "type": "equipment",
+      "description": "Wireless headset for conference calls",
+      "status": "in_progress",
+      "priority": "medium",
+      "source": "vida",
+      "dateCreated": "2024-02-05T09:00:00Z",
+      "dateUpdated": "2025-10-30T11:15:14.164Z",
+      "notes": ""
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440053",
+      "employeeId": "6ba7b813-9dad-11d1-80b4-00c04fd430c8",
+      "type": "exercise",
+      "description": "Deep breathing exercises during breaks",
+      "status": "completed",
+      "priority": "low",
+      "source": "vida",
+      "dateCreated": "2024-01-28T10:00:00Z",
+      "dateUpdated": "2024-02-02T11:00:00Z",
+      "dateCompleted": "2024-02-02T11:00:00Z",
+      "notes": "Helps with stress management"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440054",
+      "employeeId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "type": "lifestyle",
+      "description": "Reduce caffeine intake after 2 PM",
+      "status": "pending",
+      "priority": "low",
+      "source": "vida",
+      "dateCreated": "2024-02-06T08:00:00Z",
+      "dateUpdated": "2024-02-06T08:00:00Z",
+      "notes": ""
+    },
+    {
+      "id": "1761821153210",
+      "employeeId": "d0e1f2a3-b4c5-6789-3456-890123456789",
+      "type": "equipment",
+      "description": "Ping laaaa",
+      "status": "pending",
+      "priority": "medium",
+      "source": "admin",
+      "dateCreated": "2025-10-30T10:45:53.211Z",
+      "dateUpdated": "2025-10-30T10:45:53.211Z",
+      "notes": ""
+    },
+    {
+      "id": "1761821437646",
+      "employeeId": "6ba7b810-9dad-11d1-80b4-00c04fd430c8",
+      "type": "exercise",
+      "description": "Be better!",
+      "status": "pending",
+      "priority": "high",
+      "source": "admin",
+      "dateCreated": "2025-10-30T10:50:37.646Z",
+      "dateUpdated": "2025-10-30T10:50:37.646Z",
+      "notes": ""
+    }
+  ]
+}

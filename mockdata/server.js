@@ -17,6 +17,11 @@ function loadMockData() {
   return JSON.parse(fs.readFileSync(mockDataPath, 'utf8'));
 }
 
+function saveMockData(data) {
+  const mockDataPath = path.join(__dirname, 'mockData.json');
+  fs.writeFileSync(mockDataPath, JSON.stringify(data, null, 2), 'utf8');
+}
+
 function filterEmployees(employees, filters) {
   return employees.filter((employee) => {
     if (filters.department && employee.department !== filters.department) {
@@ -204,6 +209,122 @@ app.get('/suggestions/:employeeId', (req, res) => {
   } catch (error) {
     console.error('Error reading mock data:', error);
     res.status(500).json({ error: 'Failed to load suggestions data' });
+  }
+});
+
+app.post('/suggestions', (req, res) => {
+  try {
+    const mockData = loadMockData();
+    const newSuggestion = req.body;
+    
+    if (!newSuggestion.employeeId || !newSuggestion.type || !newSuggestion.description) {
+      return res.status(400).json({ error: 'Missing required fields: employeeId, type, description' });
+    }
+    
+    const newId = Date.now().toString();
+    const now = new Date().toISOString();
+    
+    const suggestion = {
+      id: newId,
+      employeeId: newSuggestion.employeeId,
+      type: newSuggestion.type,
+      description: newSuggestion.description,
+      status: newSuggestion.status || 'pending',
+      priority: newSuggestion.priority || 'low',
+      source: newSuggestion.source || 'admin',
+      dateCreated: newSuggestion.dateCreated || now,
+      dateUpdated: now,
+      notes: newSuggestion.notes || '',
+      ...(newSuggestion.dateCompleted && { dateCompleted: newSuggestion.dateCompleted }),
+      ...(newSuggestion.createdBy && { createdBy: newSuggestion.createdBy })
+    };
+    
+    mockData.suggestions.push(suggestion);
+    saveMockData(mockData);
+    
+    res.status(201).json(suggestion);
+  } catch (error) {
+    console.error('Error creating suggestion:', error);
+    res.status(500).json({ error: 'Failed to create suggestion' });
+  }
+});
+
+app.put('/suggestions/:id', (req, res) => {
+  try {
+    const mockData = loadMockData();
+    const { id } = req.params;
+    const updateData = req.body;
+    
+    const suggestionIndex = mockData.suggestions.findIndex(s => s.id === id);
+    
+    if (suggestionIndex === -1) {
+      return res.status(404).json({ error: 'Suggestion not found' });
+    }
+    
+    const updatedSuggestion = {
+      ...mockData.suggestions[suggestionIndex],
+      ...updateData,
+      id: mockData.suggestions[suggestionIndex].id,
+      dateUpdated: new Date().toISOString()
+    };
+    
+    mockData.suggestions[suggestionIndex] = updatedSuggestion;
+    saveMockData(mockData);
+    
+    res.json(updatedSuggestion);
+  } catch (error) {
+    console.error('Error updating suggestion:', error);
+    res.status(500).json({ error: 'Failed to update suggestion' });
+  }
+});
+
+app.patch('/suggestions/:id', (req, res) => {
+  try {
+    const mockData = loadMockData();
+    const { id } = req.params;
+    const updateData = req.body;
+    
+    const suggestionIndex = mockData.suggestions.findIndex(s => s.id === id);
+    
+    if (suggestionIndex === -1) {
+      return res.status(404).json({ error: 'Suggestion not found' });
+    }
+    
+    const updatedSuggestion = {
+      ...mockData.suggestions[suggestionIndex],
+      ...updateData,
+      id: mockData.suggestions[suggestionIndex].id,
+      dateUpdated: new Date().toISOString()
+    };
+    
+    mockData.suggestions[suggestionIndex] = updatedSuggestion;
+    saveMockData(mockData);
+    
+    res.json(updatedSuggestion);
+  } catch (error) {
+    console.error('Error updating suggestion:', error);
+    res.status(500).json({ error: 'Failed to update suggestion' });
+  }
+});
+
+app.delete('/suggestions/:id', (req, res) => {
+  try {
+    const mockData = loadMockData();
+    const { id } = req.params;
+    
+    const suggestionIndex = mockData.suggestions.findIndex(s => s.id === id);
+    
+    if (suggestionIndex === -1) {
+      return res.status(404).json({ error: 'Suggestion not found' });
+    }
+    
+    mockData.suggestions.splice(suggestionIndex, 1);
+    saveMockData(mockData);
+    
+    res.status(204).send();
+  } catch (error) {
+    console.error('Error deleting suggestion:', error);
+    res.status(500).json({ error: 'Failed to delete suggestion' });
   }
 });
 

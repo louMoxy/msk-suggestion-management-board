@@ -26,6 +26,10 @@ function getUrlParams() {
       if (v === SortOrder.Asc || v === SortOrder.Desc) return v;
       return undefined;
     })(),
+    status: params.get('status') || undefined,
+    priority: params.get('priority') || undefined,
+    type: params.get('type') || undefined,
+    employeeId: params.get('employeeId') || undefined,
   };
 }
 
